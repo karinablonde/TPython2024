@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icono.png" type="Imagen">
+    <title>ApartHotel Snow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <!-- header  -->
+   <header class="header">
+
+    <a href="index.html" class="logo"> <i class="fas fa-snowflake"></i> ApartHotel Snow</a>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="menu.html">Menu</a>
+        <a href="opiniones.html">Testimonios</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <form action="" class="login-form">
+
+        <h3>formulario login</h3>
+
+        <input type="email" placeholder="ingrese su email" class="box">
+        <input type="password" placeholder="ingrese su password" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="">
+            <label>Recordarme</label>
+        </div>
+        <a href="index.html" class="btn">logueate ahora</a>
+
+    </form>
+
+</header>
+<br><br><br><br><br>
+
+<!--fin header -->
+
+    <!-- Reservas -->
+    <main>
+        <section>
+
+            <div class="book">
+                <form class="book-form">
+                    <div class="form-item">
+                        <label for="checkin-date">Horario Check In: </label>
+                        <input type="date" min="2024-05-22" id="chekin-date">
+                    </div>
+                    <div class="form-item">
+                        <label for="checkout-date">Horario Check Out: </label>
+                        <input type="date" min ="2024-05-24" id="chekout-date">
+                    </div>
+                    <div class="form-item">
+                        <label for="adult">Adultos: </label>
+                        <input type="number" min="1" max="10" value="1" id="adult">
+                    </div>
+                    <div class="form-item">
+                        <label for="children">Niños: </label>
+                        <input type="number" min="0" max="10" value="0" id="children">
+                    </div>
+                    <div class="form-item">
+                        <label for="rooms">Habitaciones: </label>
+                        <input type="number" min="1" max="10" value="1" id="rooms">
+                    </div>
+                    <div class="form-item" test-align="center">
+                        <a href="index.html" class="btn">Confirme su reserva ahora</a>
+                        <!--<input type = "submit" class = "btn" value = "Reserve ahora">-->
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <section class="footer">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3><i class="fas fa-snowflake"></i> ApartHotel Snow</h3>
+                    <p>❄️Tu lugar en el Mundo.</p>
+                    <div class="share">
+                        <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+                        <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+                        <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+                        <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>contacto</h3>
+                    <p><i class="fas fa-phone"></i> +11456-7890</p>
+                    <p><i class="fas fa-envelope"></i>
+                        <a href="mailto:ApartHotel@gmail.com">ApartHotel@gmail.com</a>
+                    </p>
+                    <p><i class="fas fa-map"></i> Patagonia, Argentina</p>
+                </div>
+
+                <div class="box">
+                    <h3>Información</h3>
+                    <p>suscribite para recibir novedades</p>
+                    <form action="">
+                        <input type="email" placeholder="Ingrese su email..." class="email">
+                        <button type="submit" class="btn">Suscribirse</button> 
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="credit">@creado por <span>Grupo4</span> | todos los derechos reservados!</div>
+
+        </section>
+    </footer>
+
+    <!-- fin footer -->
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- custom js link -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
