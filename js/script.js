@@ -37,27 +37,6 @@ $(document).ready(function(){
 });
 
 
-
-
-// document.getElementById("formulario-consulta").addEventListener("submit"), function(event) {
-//     event.preventDefault();
-
-//     let name = document.getElementById("contact-name").value;
-//     let email = document.getElementById("contact-email").value;
-//     let subject = document.getElementById("contact-subject").value;
-//     let messaje = document.getElementById("messaje").value;
-
-    // Se envían los datos del formulario a través de una petición AJAX o realizar otra acción necesaria
-    // Por ejemplo, mostrar los datos en la consola
-    // console.log("Nombre: ", name);
-    // console.log("Email: ", email);
-    // console.log("Subject: ",subject);
-    // console.log("Mensaje: ", messaje)}
-
-
-
-
-
 // --------------------------------------------------------
 // Formulario Contacto
 // --------------------------------------------------------
@@ -65,6 +44,11 @@ $(document).ready(function(){
     //getElementByID selecciona el elemento del formulario con el id "formulario-consulta" y añade un event listener que estará atento a cuando se envíe el formulario. 
     // Cuando se envíe el formulario, se ejecutará la función validarFormulario
     //La llamada a event.preventDefault() evita que el formulario se envíe de forma convencional y permite que la validación se realice mediante JavaScript.
+    //Creo una expresión para poder validar que los caracteres de nombre sean correctos
+    const expresiones = {
+        nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
+    }
+    
 
     document.getElementById("formulario-consulta").addEventListener("submit", function(event) {
         event.preventDefault();
@@ -75,8 +59,9 @@ $(document).ready(function(){
     function validarFormulario() {
         let nameInput = document.getElementById("contact-name").value;
         let emailInput = document.getElementById("contact-email").vale;
-        let validacionElement = document.getElementById("validacion");   
-        if (nameInput === ''  || emailInput === '') {
+        let validacionElement = document.getElementById("validacion");  
+       //VALIDA QUE CARACTERES DE NOMBRE SEAN CORRECTOS Y TANTO NOMBRE COMO CORREO NO PUEDEN SER CAMPOS VACIOS   
+        if ( (!expresiones.nombre.test(nameInput)  || nameInput === '' )|| emailInput === '') {
             validacionElement.textContent = "Nombre y Email obligatorios";  
             validacionElement.classList.remove("validacionCorrecta");
             validacionElement.classList.add("validacionError");     
@@ -136,6 +121,7 @@ $(document).ready(function(){
         validarCheckbox(e);
         validarSubidaImagen(e);
     }
+
 
 
     

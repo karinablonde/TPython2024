@@ -106,8 +106,12 @@ section{
   color: var(--black);
 }
 
-.header .logo i{
+.header .logo i {
   color: var(--primary-color);
+}
+
+.header .logo i:hover {
+  transform: scale(-1) rotate(180deg);
 }
 
 .header .navbar a{
@@ -130,6 +134,7 @@ section{
 
 .header .icons div:hover{
   color: var(--primary-color);
+  
 }
 
 /* login */
@@ -391,7 +396,7 @@ section{
 }
 
 .order-message {
-  display: none;
+ /* display: none;*/
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -401,10 +406,6 @@ section{
   padding: 10px 10px;
   border-radius: 15px;
   z-index: 999;
-}
-
-.btn:active + .order-message {
-  display: block;
 }
 
 .menu .box-container .box{
