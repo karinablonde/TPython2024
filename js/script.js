@@ -59,11 +59,11 @@ $(document).ready(function(){
     function validarFormulario() {
         let nameInput = document.getElementById("contact-name").value;
         let emailInput = document.getElementById("contact-email").vale;
-        let validacionElement = document.getElementById("validacion");  
-       //VALIDA QUE CARACTERES DE NOMBRE SEAN CORRECTOS Y TANTO NOMBRE COMO CORREO NO PUEDEN SER CAMPOS VACIOS   
-        if ( (!expresiones.nombre.test(nameInput)  || nameInput === '' )|| emailInput === '') {
-            validacionElement.textContent = "Nombre y Email obligatorios";  
-            validacionElement.classList.remove("validacionCorrecta");
+        let validacionElement = document.getElementById("validacion");   
+         //VALIDA QUE CARACTERES DE NOMBRE SEAN CORRECTOS Y TANTO NOMBRE COMO CORREO NO PUEDEN SER CAMPOS VACIOS
+         if ( (!expresiones.nombre.test(nameInput) || nameInput === '' ) ||  emailInput === '' ){
+            validacionElement.textContent = "Datos incorrectos o incompletos";  
+                 validacionElement.classList.remove("validacionCorrecta");
             validacionElement.classList.add("validacionError");     
         } else {
             validacionElement.textContent = "Formulario enviado correctamente";
@@ -72,55 +72,39 @@ $(document).ready(function(){
         }
     }
 
-// --------------------------------------------------------
-// Formulario Imagen
-// --------------------------------------------------------
-    document.getElementById("formularioImagen").addEventListener("submit", function(event) {
-        event.preventDefault(); // Evita que el formulario se envíe de manera convencional
-        validarFormularioImagen(event); // Llama a la función validarFormularioImagen() pasando el evento
-    });
-    
-    let formularioImagen = document.getElementById('formularioImagen'); // Accede al formulario por su ID
+//----- VALIDA CONDICIONES PARA SUBIR IMAGEN
+document.getElementById('formularioImagen').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío predeterminado del formulario
 
-// --------------------------------------------------------
-// Validamos Redes
-// --------------------------------------------------------
-    let validarRadio = function (e) {
-        if (!formularioImagen.redes[0].checked && !formularioImagen.redes[1].checked && !formularioImagen.redes[2].checked) {
-            alert("Por favor, selecciona una red social");
-            e.preventDefault(); // Evita el comportamiento por defecto
-            // https://www.w3schools.com/jsref/event_preventdefault.asp
-        }
+    var imagen = document.getElementById('imagen').value;
+    var opcion1 = document.getElementById('opcion1').checked;
+    var opcion2 = document.getElementById('opcion2').checked;
+    var opcion3 = document.getElementById('opcion3').checked;
+    var acepto = document.getElementById('terminos').checked;
+
+    if (imagen === '') {
+        alert('Por favor, selecciona una imagen.');
+        return false;
     }
-    
-// --------------------------------------------------------
-// Validamos Terminos y Condiciones
-// --------------------------------------------------------
-    let validarCheckbox = function (e) {
-        if (!formularioImagen.terminos.checked) {
-            alert("Por favor, acepta los términos y condiciones");
-            e.preventDefault(); // Evita que se envíe el formulario
-        }
-    };
-// --------------------------------------------------------
-// Validamos subir imagen
-// --------------------------------------------------------
-    let validarSubidaImagen = function (e) {
-        let archivo = document.getElementById('imagen').files[0];
-        if (!archivo) {
-            alert("Por favor, selecciona una imagen.");
-            e.preventDefault(); // Evita que se envíe el formulario
-            return;
-        }
+
+    if (!opcion1 && !opcion2 && !opcion3) {
+        alert('Por favor, selecciona una red social.');
+        return false;
     }
-// --------------------------------------------------------
-// Se ejecuta al presionar submit e invoca a las tres validaciones
-// --------------------------------------------------------
-    let validarFormularioImagen = function (e) {  // "e" es el evento recibido del form (https://developer.mozilla.org/es/docs/Web/API/Event/preventDefault)
-        validarRadio(e);
-        validarCheckbox(e);
-        validarSubidaImagen(e);
+
+    if (!acepto) {
+        alert('Por favor, acepta los términos y condiciones.');
+        return false;
     }
+
+    mostrarMensajeExito();
+});
+
+function mostrarMensajeExito() {
+    document.getElementById('formularioImagen').reset();
+    document.getElementById('mensajeExito').style.display = 'block';
+}
+
 
 
 
