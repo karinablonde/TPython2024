@@ -63,7 +63,7 @@ $(document).ready(function(){
          //VALIDA QUE CARACTERES DE NOMBRE SEAN CORRECTOS Y TANTO NOMBRE COMO CORREO NO PUEDEN SER CAMPOS VACIOS
          if ( (!expresiones.nombre.test(nameInput) || nameInput === '' ) ||  emailInput === '' ){
             validacionElement.textContent = "Datos incorrectos o incompletos";  
-                 validacionElement.classList.remove("validacionCorrecta");
+            validacionElement.classList.remove("validacionCorrecta");
             validacionElement.classList.add("validacionError");     
         } else {
             validacionElement.textContent = "Formulario enviado correctamente";
