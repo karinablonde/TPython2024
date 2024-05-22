@@ -1,13 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "../../Público/karinablonde"
-		},
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "ApartHotel K@RY"
-	}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
