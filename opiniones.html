@@ -113,52 +113,52 @@
 
             </div>
 
+            <div class="contact">
+                <div class="container">
+                    <div class="contact-img">
+                        <img src="//img.freepik.com/fotos-premium/agradable-familia-feliz-divirtiendose-nieve-invierno-foto-alta-calidad_470178-21011.jpg" alt="">
 
-            <div class="column">
-                <!-- Encabezado -->
-                <div class="section-heading">
-                    <h2>Muéstranos tu experiencia</h2> 
-                    <p>Subí una foto y un comentario de tu estadía a nuestras redes</p>
-                </div> 
-                <br><br>
-                <div class="contact-form-area"> 
-                    
-                    <form id="formularioImagen" >
-                        <!-- Opciones de Redes-->
-                        <div class="col-md-5">
-                        <div class="radio">
-                            <label for="opcion1"> <input type="radio"  name="opcion1" id="opcion1" value="opcion1"> Facebook </label>
-                            <label for="opcion2"> <input type="radio"  name="opcion2" id="opcion2" value="opcion2"> Instagram </label>
-                            <label for="opcion3"> <input type="radio"  name="opcion3" id="opcion3" value="opcion3"> X </label>
-                            <br><br>
-                        </div>
-                        <!-- Comentario -->
-                        <div class="form-group">
-                            <textarea class="form-control" name="comment" id="comment" cols="20" rows="10"
-                                placeholder="Escriba un Comentario..." ></textarea>
-                        </div>
-                        <!-- Términos y Condiciones-->
-                        <div class="checkbox">
-                            <input type="checkbox" name="terminos" id="terminos" value="yes"> Acepto Términos y Condiciones
-                            <br><br>
-                        </div>
-                        <!-- Subida de Imagen-->
-                        <div>
-                            <label for="imagen"></label>
-                            <input type="file" id="imagen" name="imagen" accept="image/*">
-                        </div>
-                        <br>
-                        <!-- Botón para enviar todo-->
-                        <div>
-                           <button  id="orderButton" type="submit" class="btn" value="Enviar">Subir Imagen</button> 
-                        </div>
-                    </form>
-                    <!-- Si los datos fueron validados correctamente se subirá la imagen-->
-                    <div id="mensajeExito" style="display: none">
-                        <br><p style="color: green">¡Gracias tu imagen se cargó exitosamente!</p>
                     </div>
-                </div>        
-            </div>    
+
+                    <div class="contact-content">
+                        <!-- Encabezado -->
+                        <div class="section-heading">
+                            <h2>Muéstranos tu experiencia</h2> 
+                            <p>Subí una foto y un comentario de tu estadía a nuestras redes</p>
+                        </div> 
+                        <br><br>
+                        <div class="contact-form-area"> 
+                            <form id="formularioImagen">
+                                <!-- <form action="enviar.php" method="post"> para enviar un mail con php -->
+                                <div class="col-md-5">
+                                <div class="radio">
+                                    <input type="radio"  name="redes" id="facebook" value="Facebook"> Facebook
+                                    
+                                    <input type="radio"  name="redes" id="instagram" value="Instagram"> Instagram
+                                    <input type="radio"  name="redes" id="x" value="X"> X
+                                    <br><br>
+                                </div>
+        
+                                <div class="form-group">
+                                    <textarea class="form-control" name="comment" id="comment" cols="20" rows="10"
+                                        placeholder="Escriba un Comentario..." ></textarea>
+                                </div>
+                                
+                                <div class="checkbox">
+                                    <input type="checkbox" name="terminos" id="terminos" value="yes"> Acepto Términos y Condiciones
+                                    <br><br>
+                                </div>
+        
+                                <div>
+                                    <input type="file"  id="imagen" name="imagen"><br><br>
+                                    <button type="submit" class="btn">Subir Imagen</button>
+                                </div>
+                            </form>
+                        </div>        
+                </div>
+
+            </div>
+  
             <br><br><br>
         
         <!-- fin sección opinión -->
