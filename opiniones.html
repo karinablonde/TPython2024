@@ -105,8 +105,8 @@
                     <div class="user">
                         <img src="img/pic-4.png" alt="">
                         <div class="info">
-                            <h3>Tefi</h3>
-                            <span>Programadora</span>
+                            <h3>Dylem</h3>
+                            <span>Programador</span>
                         </div>
                     </div>
                 </div>
@@ -114,52 +114,62 @@
             </div>
 
 
-            <div class="column">
-                <!-- Encabezado -->
-                <div class="section-heading">
-                    <h2>Muéstranos tu experiencia</h2> 
-                    <p>Subí una foto y un comentario de tu estadía a nuestras redes</p>
-                </div> 
-                <br><br>
-                <div class="contact-form-area"> 
-                    
-                    <form id="formularioImagen" >
-                        <!-- Opciones de Redes-->
-                        <div class="col-md-5">
-                        <div class="radio">
-                            <label for="opcion1"> <input type="radio"  name="opcion1" id="opcion1" value="opcion1"> Facebook </label>
-                            <label for="opcion2"> <input type="radio"  name="opcion2" id="opcion2" value="opcion2"> Instagram </label>
-                            <label for="opcion3"> <input type="radio"  name="opcion3" id="opcion3" value="opcion3"> X </label>
-                            <br><br>
-                        </div>
-                        <!-- Comentario -->
-                        <div class="form-group">
-                            <textarea class="form-control" name="comment" id="comment" cols="20" rows="10"
-                                placeholder="Escriba un Comentario..." ></textarea>
-                        </div>
-                        <!-- Términos y Condiciones-->
-                        <div class="checkbox">
-                            <input type="checkbox" name="terminos" id="terminos" value="yes"> Acepto Términos y Condiciones
-                            <br><br>
-                        </div>
-                        <!-- Subida de Imagen-->
-                        <div>
-                            <label for="imagen"></label>
-                            <input type="file" id="imagen" name="imagen" accept="image/*">
-                        </div>
-                        <br>
-                        <!-- Botón para enviar todo-->
-                        <div>
-                           <button  id="orderButton" type="submit" class="btn" value="Enviar">Subir Imagen</button> 
-                        </div>
-                    </form>
-                    <!-- Si los datos fueron validados correctamente se subirá la imagen-->
-                    <div id="mensajeExito" style="display: none">
-                        <br><p style="color: green">¡Gracias tu imagen se cargó exitosamente!</p>
+            <div class="contact">
+                <div class="container">
+                    <div class="contact-img">
+                        <img src="//img.freepik.com/fotos-premium/agradable-familia-feliz-divirtiendose-nieve-invierno-foto-alta-calidad_470178-21011.jpg" alt="">
+
                     </div>
-                </div>        
-            </div>    
-            <br><br><br>
+
+                    <div class="contact-content">
+                        <!-- Encabezado -->
+                        <div class="section-heading">
+                            <h2>Muéstranos tu experiencia</h2> 
+                            <p>Subí una foto y un comentario de tu estadía a nuestras redes</p>
+                        </div> 
+                        <br><br>
+                        <div class="contact-form-area"> 
+                    
+                        <form id="formularioImagen" >
+                        <!-- Opciones de Redes-->
+                            <div class="col-md-5">
+                               <div class="radio">
+                                  <label for="opcion1"> <input type="radio"  name="opcion1" id="opcion1" value="opcion1"> Facebook </label>
+                                  <label for="opcion2"> <input type="radio"  name="opcion2" id="opcion2" value="opcion2"> Instagram </label>
+                                  <label for="opcion3"> <input type="radio"  name="opcion3" id="opcion3" value="opcion3"> X </label>
+                                  <br><br>
+                                </div>
+                                <!-- Comentario -->
+                                <div class="form-group">
+                                   <textarea class="form-control" name="comment" id="comment" cols="20" rows="10"
+                                   placeholder="Escriba un Comentario..." ></textarea>
+                                </div>
+                                <!-- Términos y Condiciones-->
+                                <div class="checkbox">
+                                  <input type="checkbox" name="terminos" id="terminos" value="yes"> Acepto Términos y Condiciones
+                                  <br><br><br><br>
+                                </div>
+                                <!-- Subida de Imagen-->
+                                <div>
+                                   <label for="imagen"></label>
+                                   <input type="file" id="imagen" name="imagen" accept="image/*">
+                                </div>
+                                <br><br>
+                                <!-- Botón para enviar todo-->
+                                <div>
+                                   <button  id="orderButton" type="submit" class="btn" value="Enviar">Subir Imagen</button> 
+                                </div>
+                        </form>
+                              <!-- Si los datos fueron validados correctamente se subirá la imagen-->
+                                <div id="mensajeExito" style="display: none">
+                                   <br><span class="redes">¡Gracias tu imagen se cargó exitosamente!</span>
+                                </div>
+                            </div>        
+                        </div>    
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
         
         <!-- fin sección opinión -->
 
@@ -168,7 +178,7 @@
         
             <div class="container">
 
-                <div class="column">
+                <div class="contact">
                     <!-- Encabezado -->
                     <div class="section-heading">
                         <h2>Mantente en contacto</h2>                       
@@ -206,7 +216,6 @@
                                         placeholder="Escriba un Mensaje..." ></textarea>
                                 </div>
                                     
-                                <br>
                                 <div>
                                     <!-- VER COMO SE ENVIA LA CONSULTA CON JS -->
                                     <button  id="orderButton" type="submit" class="btn">Enviar Consulta</button> 
@@ -219,7 +228,7 @@
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="contact-content">
                     <!-- Google Maps -->
                     <div class="map-area col-12">
                         <iframe
