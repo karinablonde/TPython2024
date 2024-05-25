@@ -953,7 +953,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 42rem;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 30px;
   border-radius: 10px;
   margin: 0px auto;
@@ -966,17 +966,31 @@ section {
 .contact-img img {
   object-fit: cover;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   transition: transform 0.3s ease;
 }
 
 @media (max-width: 425px) {
   .contact-img img {
+    max-width: 420px;
+    overflow-x: hidden;
     width: max-content;
     height: 400px;
-    margin-left: -170px
+    margin-left: -150px;
+    
   }
 }
+
+@media (max-width: 320px) {
+    .contact-img img {
+      max-width: 315px;
+      overflow-x: hidden;
+      width: max-content;
+      height: 400px;
+      margin-left: -150px;
+    }
+  }
+  
 
 .contact-img:hover img {
   transform: scale(1.1);

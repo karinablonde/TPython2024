@@ -62,7 +62,7 @@ $(document).ready(function(){
         let validacionElement = document.getElementById("validacion");   
          //VALIDA QUE CARACTERES DE NOMBRE SEAN CORRECTOS Y TANTO NOMBRE COMO CORREO NO PUEDEN SER CAMPOS VACIOS
          if ( (!expresiones.nombre.test(nameInput) || nameInput === '' ) ||  emailInput === '' ){
-            validacionElement.textContent = "Datos incorrectos o incompletos";  
+            validacionElement.textContent = "Nombre incorrecto o incompleto";  
             validacionElement.classList.remove("validacionCorrecta");
             validacionElement.classList.add("validacionError");     
         } else {
@@ -70,6 +70,20 @@ $(document).ready(function(){
             validacionElement.classList.remove("validacionError");
             validacionElement.classList.add("validacionCorrecta");
         }
+        // Voy a limpiar el span para cargar otra vez los datos si me equivoque
+    var limpiarBoton = document.getElementById("orderButton1");
+
+    // Agregar un event listener al botón "Limpiar Formulario" para ocultar el span cuando se haga clic en él
+    limpiarBoton.addEventListener("click", function () {
+        // Selecciono el span por su ID
+        var spanValidacion = document.getElementById("validacion");
+
+        // Ocultar el span si el mensaje es de datos incorrectos
+        if ((validacionElement.textContent == "Nombre incorrecto o incompleto") || (validacionElement.textContent == "Email incompleto")) {
+            spanValidacion.style.display = "none";
+        }
+        location.reload();
+    });
     }
 
 //----- VALIDA CONDICIONES PARA SUBIR IMAGEN
