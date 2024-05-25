@@ -947,7 +947,6 @@ section {
   display: inline-block;
   margin-right: 20px;
 }
-
 /* Foto familia */
 
 .contact .container {
@@ -963,12 +962,11 @@ section {
 
 .contact-img {
   width: 50%;
-  object-fit: cover;
   overflow: hidden;
 }
 
 .contact-img img {
-  flex: 1 1 42rem;
+  display: block;
   width: 100%;
   /* height: 400px;  */
   transition: transform 0.3s ease;
@@ -991,5 +989,12 @@ section {
   flex-wrap: wrap;
   flex: 1 1 42rem;
   width: 50%;
+<<<<<<< HEAD
   margin-left: 0px;
 }
+=======
+  margin-left: 40px;
+}
+
+
+>>>>>>> 7aff54fcb365b86334b5d954c1bd04b783c5f3ef
