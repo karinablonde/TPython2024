@@ -834,7 +834,7 @@ section {
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 3.5rem;
+  gap: 5.5rem;
 }
 
 .container .contact {
@@ -842,7 +842,7 @@ section {
   flex-wrap: wrap;
   flex: 1 1 42rem;
   width: 50%;
-
+ 
 }
 
 .container .contact-content {
@@ -850,7 +850,6 @@ section {
   flex-wrap: wrap;
   flex: 1 1 42rem;
   width: 50%;
-  margin-top: px;
 }
 
 .container .contact-content .map-area {
@@ -962,13 +961,12 @@ section {
 
 .contact-img {
   width: 50%;
-  overflow: hidden;
 }
 
 .contact-img img {
-  display: block;
+  object-fit: cover;
   width: 100%;
-  /* height: 400px;  */
+  height: 100%; 
   transition: transform 0.3s ease;
 }
 
